@@ -1,8 +1,15 @@
-1287171271
+1287176795
 Application	/var/www/myhoame/config/application.rb	  class Application 
 ApplicationController	/var/www/myhoame/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/var/www/myhoame/app/helpers/application_helper.rb	module ApplicationHelper
 BrowsingTest	/var/www/myhoame/test/performance/browsing_test.rb	class BrowsingTest 
 Myhoame	/var/www/myhoame/config/application.rb	module Myhoame
+PagesController	/var/www/myhoame/app/controllers/pages_controller.rb	class PagesController 
+PagesControllerTest	/var/www/myhoame/test/functional/pages_controller_test.rb	class PagesControllerTest 
+PagesHelper	/var/www/myhoame/app/helpers/pages_helper.rb	module PagesHelper
+PagesHelperTest	/var/www/myhoame/test/unit/helpers/pages_helper_test.rb	class PagesHelperTest 
 TestCase	/var/www/myhoame/test/test_helper.rb	class ActiveSupport::TestCase
+about	/var/www/myhoame/app/controllers/pages_controller.rb	  def about
+contact	/var/www/myhoame/app/controllers/pages_controller.rb	  def contact
+home	/var/www/myhoame/app/controllers/pages_controller.rb	  def home
 test_homepage	/var/www/myhoame/test/performance/browsing_test.rb	  def test_homepage
