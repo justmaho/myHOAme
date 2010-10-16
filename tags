@@ -1,4 +1,5 @@
-1287203723
+1287261658
+AddNameToUser	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	class AddNameToUser 
 Application	/var/www/myhoame/config/application.rb	  class Application 
 ApplicationController	/var/www/myhoame/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/var/www/myhoame/app/helpers/application_helper.rb	module ApplicationHelper
@@ -7,6 +8,7 @@ ChangeHomeUserColumn	/var/www/myhoame/db/migrate/20101015212110_change_home_user
 CreateHomes	/var/www/myhoame/db/migrate/20101015211546_create_homes.rb	class CreateHomes 
 CreatePayments	/var/www/myhoame/db/migrate/20101016033001_create_payments.rb	class CreatePayments 
 CreateUsers	/var/www/myhoame/db/migrate/20101015210944_create_users.rb	class CreateUsers 
+DeviseCreateUsers	/var/www/myhoame/db/migrate/20101016200311_devise_create_users.rb	class DeviseCreateUsers 
 Home	/var/www/myhoame/app/models/home.rb	class Home 
 HomeTest	/var/www/myhoame/test/unit/home_test.rb	class HomeTest 
 HomesController	/var/www/myhoame/app/controllers/homes_controller.rb	class HomesController 
@@ -43,6 +45,8 @@ down	/var/www/myhoame/db/migrate/20101015210944_create_users.rb	  def self.down
 down	/var/www/myhoame/db/migrate/20101015211546_create_homes.rb	  def self.down
 down	/var/www/myhoame/db/migrate/20101015212110_change_home_user_column.rb	  def self.down
 down	/var/www/myhoame/db/migrate/20101016033001_create_payments.rb	  def self.down
+down	/var/www/myhoame/db/migrate/20101016200311_devise_create_users.rb	  def self.down
+down	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	  def self.down
 edit	/var/www/myhoame/app/controllers/homes_controller.rb	  def edit
 edit	/var/www/myhoame/app/controllers/payments_controller.rb	  def edit
 edit	/var/www/myhoame/app/controllers/users_controller.rb	  def edit
@@ -62,6 +66,8 @@ up	/var/www/myhoame/db/migrate/20101015210944_create_users.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101015211546_create_homes.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101015212110_change_home_user_column.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101016033001_create_payments.rb	  def self.up
+up	/var/www/myhoame/db/migrate/20101016200311_devise_create_users.rb	  def self.up
+up	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	  def self.up
 update	/var/www/myhoame/app/controllers/homes_controller.rb	  def update
 update	/var/www/myhoame/app/controllers/payments_controller.rb	  def update
 update	/var/www/myhoame/app/controllers/users_controller.rb	  def update

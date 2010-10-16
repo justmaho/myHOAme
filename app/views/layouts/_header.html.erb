@@ -1,7 +1,20 @@
 <div id="header">
-      <%= link_to_unless_current "Home", root_path %>
-      <%= link_to_unless_current "About", about_path %>
-      <%= link_to_unless_current "Contact", contact_path %>
-      <%= link_to_unless_current "Sign In", "#" %>
-      <%= link_to_unless_current "911", emergency_path %>
+  <p>    
+    <%= link_to_unless_current "Home", root_path %>
+    <%= link_to_unless_current "About", about_path %>
+    <%= link_to_unless_current "Contact", contact_path %>
+    <%= link_to_unless_current "911", emergency_path %>
+  </p>
+  
+  <div id="user_nav">
+  
+</div>
+  <p>
+   <% if user_signed_in? %>
+    Signed in as <%= current_user.name %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+  </p>
 </div>
