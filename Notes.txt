@@ -1,0 +1,24 @@
+EventCalendar
+http://dev.elevationblog.com/2009/07/23/event-calendar-rails-plugin/
+
+AuthLogic
+http://github.com/binarylogic/authlogic
+
+Devise
+http://github.com/plataformatec/devise
+http://railscasts.com/episodes/210-customizing-devise
+http://railscasts.com/episodes/209-introducing-devise
+
+http://everydayrails.com/2010/06/06/rails-authentication-options.html
+
+ReservationCalendar
+http://github.com/broughten/reservation_calendar
+
+actsasmessageable
+http://code.google.com/p/actsasmessageable/
+
+Recommended plugins for social networks apps
+http://jimneath.org/2008/04/25/building-a-social-network-site-in-rails/
+
+This one is down. Check later
+http://www.missingmethod.com/2007/01/08/how-to-build-a-social-network-with-ruby-on-rails/
