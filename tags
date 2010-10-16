@@ -1,4 +1,4 @@
-1287261658
+1287266854
 AddNameToUser	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	class AddNameToUser 
 Application	/var/www/myhoame/config/application.rb	  class Application 
 ApplicationController	/var/www/myhoame/app/controllers/application_controller.rb	class ApplicationController 

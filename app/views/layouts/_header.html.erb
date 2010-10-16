@@ -1,20 +1,24 @@
-<div id="header">
-  <p>    
+<% if user_signed_in? %>
+<h1>Welcome to myHOAme, <%= current_user.name %> </h1>
+<ul>
+  <li>
+    <%= link_to_unless_current "My Information", "users/" + current_user.id.to_s %>
+  </li>
+</ul>
+<% else %>
+  <h1>Welcome to myHOAme</h1>
+<% end %>
+<ul>
+  <li>
     <%= link_to_unless_current "Home", root_path %>
+  </li>
+  <li>
     <%= link_to_unless_current "About", about_path %>
+  </li>
+  <li>  
     <%= link_to_unless_current "Contact", contact_path %>
-    <%= link_to_unless_current "911", emergency_path %>
-  </p>
-  
-  <div id="user_nav">
-  
-</div>
-  <p>
-   <% if user_signed_in? %>
-    Signed in as <%= current_user.name %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-  <% end %>
-  </p>
-</div>
+  </li>
+  <li>
+    <%= link_to_unless_current "911", emergency_path %>    
+  </li>
+</ul>

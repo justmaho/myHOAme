@@ -1,10 +1,10 @@
-- Authentication
+- Authentication - Partialy DONE, need to add ROLES
 - Reservations model and controller
 - Style up
 - Internal messages engine
 - Banners with Adds 
 - Admin Panel
 - Emergency phone numbers static page - Done
-- Internatiolization
+- Internationalization
 - Config file
 - E-payment

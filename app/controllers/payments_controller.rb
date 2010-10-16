@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
-  # GET /payments
-  # GET /payments.xml
+  before_filter :authenticate_user!
+  
   def index
     @payments = Payment.all
 

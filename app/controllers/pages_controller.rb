@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:home, :emergency, :contact]
+  
   def about
     @title = "About"
   end
@@ -8,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    @title ="Home"
+    @title ="Home"    
   end
   
   def emergency

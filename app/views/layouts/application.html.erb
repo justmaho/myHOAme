@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>MyHOAme | <%= @title %></title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'style.css', :media => 'screen' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
   <div id="container">
-      <%= render 'layouts/header' %>
-    <div id="main">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
+    <div id="top_nav"><%= render 'layouts/top_nav' %></div>
+    <div id="header"><%= render 'layouts/header' %></div>
+    <div><%= yield %></div>
+    <div id="footer"><%= render 'layouts/footer' %></div>
   </div>
 </body>
 </html>
+
+

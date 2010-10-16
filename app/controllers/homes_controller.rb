@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
-  # GET /homes
-  # GET /homes.xml
+  before_filter :authenticate_user!
+  
   def index
     @homes = Home.all
 

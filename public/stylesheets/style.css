@@ -1,0 +1,25 @@
+html, body{
+  margin:0;
+  padding:0;
+  background:#ccc;
+}
+
+#container{
+  width:950px;
+  background:#fff;
+  margin:0 auto;
+  padding:10px;
+}
+
+#top_nav{
+  text-align:right;
+}
+
+#header{}
+
+#header ul{}
+
+#header ul li{
+  list-style-type:none;
+  display:inline;
+}
