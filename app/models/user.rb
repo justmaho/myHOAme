@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :homes
+  has_many :payments
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

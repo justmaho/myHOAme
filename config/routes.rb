@@ -1,4 +1,6 @@
 Myhoame::Application.routes.draw do
+  resources :payments
+
   resources :homes
 
   resources :users

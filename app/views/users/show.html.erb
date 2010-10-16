@@ -24,6 +24,24 @@
 </p>
 <% end %>
 
+<p>
+  <b>Pagos realizados </b>
+</p>
+<% @payment.each do |money| %>
+<p>
+  <b>Cantidad: </b>
+  $<%= money.ammount %>
+</p>
+<p>
+  <b>Concepto: </b>
+  <%= money.concept %>
+</p>
+<p>
+  <b>Fecha: </b>
+  <%= money.created_at %>
+</p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
