@@ -1,0 +1,10 @@
+- Authentication
+- Reservations model and controller
+- Style up
+- Internal messages engine
+- Banners with Adds 
+- Admin Panel
+- Emergency phone numbers static page - Done
+- Internatiolization
+- Config file
+- E-payment

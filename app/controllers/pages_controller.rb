@@ -10,5 +10,9 @@ class PagesController < ApplicationController
   def home
     @title ="Home"
   end
+  
+  def emergency
+    @title = "Emergency Phone Numbers"
+  end
 
 end

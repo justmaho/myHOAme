@@ -1,4 +1,4 @@
-1287202829
+1287203723
 Application	/var/www/myhoame/config/application.rb	  class Application 
 ApplicationController	/var/www/myhoame/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/var/www/myhoame/app/helpers/application_helper.rb	module ApplicationHelper
@@ -46,6 +46,7 @@ down	/var/www/myhoame/db/migrate/20101016033001_create_payments.rb	  def self.do
 edit	/var/www/myhoame/app/controllers/homes_controller.rb	  def edit
 edit	/var/www/myhoame/app/controllers/payments_controller.rb	  def edit
 edit	/var/www/myhoame/app/controllers/users_controller.rb	  def edit
+emergency	/var/www/myhoame/app/controllers/pages_controller.rb	  def emergency
 home	/var/www/myhoame/app/controllers/pages_controller.rb	  def home
 index	/var/www/myhoame/app/controllers/homes_controller.rb	  def index
 index	/var/www/myhoame/app/controllers/payments_controller.rb	  def index
