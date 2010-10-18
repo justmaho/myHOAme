@@ -1,8 +1,11 @@
-- Authentication - Partialy DONE, need to add ROLES
+- Authentication - Partially DONE, need to add ROLES
 - Reservations model and controller
-- Style up
+- Style up - Partially DONE
 - Internal messages engine
 - Banners with Adds 
+  - User shall have the hability to create adds
+    - Upload image 
+    - Add information about the item
 - Admin Panel
 - Emergency phone numbers static page - Done
 - Internationalization
