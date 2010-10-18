@@ -2,7 +2,10 @@
 <h1>Welcome to myHOAme, <%= current_user.name %> </h1>
 <ul>
   <li>
-    <%= link_to_unless_current "My Information", users_path %>
+    <%= link_to_unless_current "My Information", current_user %>
+  </li>
+  <li>
+    <%= link_to_unless_current "Edit My Information", edit_user_path(@user) %>
   </li>
 </ul>
 <% else %>
