@@ -1,4 +1,6 @@
 Myhoame::Application.routes.draw do
+  resources :services
+
   devise_for :users
 
   resources :payments

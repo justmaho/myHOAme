@@ -1,24 +1,37 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!    
   
   def index
-    @users = User.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @users }
+    if current_user.role == 1
+      @users = User.all
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @users }  
+      end
+    else      
+      respond_to do |format|
+        format.html { redirect_to(current_user, :notice => 'please sign in as admin to complete this operation') }
+        format.xml  { head :ok }
+      end
     end
   end
 
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id])
-    @info = @user.homes
-    @payment = @user.payments
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user }
+    if current_user.role == 1 || current_user == User.find(params[:id])
+      @user = User.find(params[:id])
+      @home = @user.homes
+      @payment = @user.payments
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @user }
+      end
+    else 
+      respond_to do |format|
+        format.html { redirect_to(current_user, :notice => 'please sign in as admin to complete this operation') }
+        format.xml  { head :ok }
+      end
     end
   end  
     
@@ -37,7 +50,14 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    if current_user.role == 1 || current_user == User.find(params[:id])
+      @user = User.find(params[:id]) 
+    else
+      respond_to do |format|
+        format.html { redirect_to(current_user, :notice => 'please sign in as admin to complete this operation') }
+        format.xml  { head :ok }
+      end
+    end
   end
 
   # POST /users

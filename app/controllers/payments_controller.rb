@@ -2,11 +2,17 @@ class PaymentsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @payments = Payment.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @payments }
+    if current_user.role == 1
+      @payments = Payment.all
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @payments }  
+      end
+    else      
+      respond_to do |format|
+        format.html { redirect_to(current_user, :notice => 'please sign in as admin to complete this operation') }
+        format.xml  { head :ok }
+      end
     end
   end
 

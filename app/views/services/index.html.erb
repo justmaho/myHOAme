@@ -1,0 +1,30 @@
+<h1>Listing services</h1>
+
+<table>
+  <tr>
+    <th>Service name</th>
+    <th>Person name</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @services.each do |service| %>
+  <tr>
+    <td><%= service.service_name %></td>
+    <td><%= service.person_name %></td>
+    <td><%= service.phone %></td>
+    <% if current_user.role == 1 %>
+    <td><%= link_to 'Show', service %></td>
+    <td><%= link_to 'Edit', edit_service_path(service) %></td>
+    <td><%= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if current_user.role == 1 %>
+<%= link_to 'New Service', new_service_path %>
+<% end %>

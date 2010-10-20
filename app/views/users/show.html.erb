@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
+<% if @user.avatar.exists? then %>
 <%= image_tag @user.avatar.url(:small) %>
+<% else %>
+<%= link_to "There are no photo’s attached, upload one.", edit_user_path(current_user) %>
+<% end %>
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -13,14 +17,17 @@
 <p>
   <b>Informacion de casa </b>
 </p>
-<% @info.each do |info| %>
+<% @home.each do |home| %>
 <p>
   <b>Direccion: </b>
-  <%= info.address %>
+  <%= home.address %>
 </p>
 <p>
   <b>Telefono: </b>
-  <%= info.phone %>
+  <%= home.phone %>
+</p>
+<p>
+  <%= link_to 'Editar esta informacion', edit_home_path(home.id) %>
 </p>
 <% end %>
 

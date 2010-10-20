@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+<p>Welcome to myHOAme, <%= current_user.name %> </p>
+<ul>
+  <li>
+    <%= link_to_unless_current "My Information", current_user %>
+  </li>
+  <li>
+    <%= link_to_unless_current "Edit My Information", edit_user_path(current_user) %>
+  </li>
+  <% if current_user.role == 1 %>
+    <li>
+      <%= link_to_unless_current "Apply payment", new_payment_path %>
+    </li>
+    <% end %>
+    <li>
+      <%= link_to_unless_current "Servicios", services_path %>
+    </li>
+  </ul>
+<% end %>
+
+

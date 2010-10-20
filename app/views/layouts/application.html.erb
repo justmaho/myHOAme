@@ -8,10 +8,22 @@
 </head>
 <body>
   <div id="container">
-    <div id="top_nav"><%= render 'layouts/top_nav' %></div>
-    <div id="header"><%= render 'layouts/header' %></div>
-    <div><%= yield %></div>
-    <div id="footer"><%= render 'layouts/footer' %></div>
+	  <div id="header">
+      <div id="top-nav"><%= render 'layouts/top_nav' %></div>
+		  <h1>
+			  Welcome to myHOAme
+      </h1>
+    </div>
+    <div id="top-menu"><%= render 'layouts/top_menu' %></div>
+	  <div id="nav">
+      <%= render 'layouts/left' %>  
+	  </div>
+	  <div id="content">
+      <%= yield %>  
+	  </div>
+	  <div id="footer">
+      <%= render 'layouts/footer' %>
+	  </div>
   </div>
 </body>
 </html>
