@@ -5,6 +5,7 @@
     <th>Service name</th>
     <th>Person name</th>
     <th>Phone</th>
+    <th>Type</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= service.service_name %></td>
     <td><%= service.person_name %></td>
     <td><%= service.phone %></td>
+    <td><%= service.service_type %></td>
     <% if current_user.role == 1 %>
     <td><%= link_to 'Show', service %></td>
     <td><%= link_to 'Edit', edit_service_path(service) %></td>

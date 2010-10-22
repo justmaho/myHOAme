@@ -1,58 +1,6 @@
-body{
-  margin: 0;
-  padding: 0;
-  font-family: georgia, times, "times new roman", serif; 
-  background: #ccc;
-}
 
-/* Layout */
-#container{
-  margin: 1em 5%;
-	background: #FFF;
-}
-
-#header{
-	border-bottom: 1px solid #333;
-  padding:5px;
-}
-
-#top-menu{
-  border-bottom: 1px solid #333;
-  padding:5px;
-}
-
-#top-nav{
+#logout{
   float:right;
-}
-
-#nav{
-	float: left;
-	width: 160px;
-	margin-left: 10px;
-	padding-top: 1em;
-  border-right:1px solid #333;
-}
-
-#content{
-	padding-top: 1em;
-	margin: 0 2em 0 200px;
-}
-
-#footer {
-	clear: both;
-	background-color: #666;
-	padding: 1em;
-	text-align: right;
-	border-top: 1px solid #333;
-}
-
-
-/* lists */
-#top-menu ul{
-  display:inline;
-}
-
-#top-menu li{
-  display:inline;
-  list-style:none;
+  font-size:12px;
+  margin:5px;
 }

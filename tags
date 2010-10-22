@@ -1,5 +1,6 @@
-1287543249
+1287718300
 AddAttachmentAvatarToUser	/var/www/myhoame/db/migrate/20101018025008_add_attachment_avatar_to_user.rb	class AddAttachmentAvatarToUser 
+AddGifToService	/var/www/myhoame/db/migrate/20101020025559_add_gif_to_service.rb	class AddGifToService 
 AddNameToUser	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	class AddNameToUser 
 AddRoleToUser	/var/www/myhoame/db/migrate/20101018022220_add_role_to_user.rb	class AddRoleToUser 
 Application	/var/www/myhoame/config/application.rb	  class Application 
@@ -61,6 +62,7 @@ down	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	  def self.d
 down	/var/www/myhoame/db/migrate/20101018022220_add_role_to_user.rb	  def self.down
 down	/var/www/myhoame/db/migrate/20101018025008_add_attachment_avatar_to_user.rb	  def self.down
 down	/var/www/myhoame/db/migrate/20101019223332_create_services.rb	  def self.down
+down	/var/www/myhoame/db/migrate/20101020025559_add_gif_to_service.rb	  def self.down
 edit	/var/www/myhoame/app/controllers/homes_controller.rb	  def edit
 edit	/var/www/myhoame/app/controllers/payments_controller.rb	  def edit
 edit	/var/www/myhoame/app/controllers/services_controller.rb	  def edit
@@ -89,6 +91,7 @@ up	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101018022220_add_role_to_user.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101018025008_add_attachment_avatar_to_user.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101019223332_create_services.rb	  def self.up
+up	/var/www/myhoame/db/migrate/20101020025559_add_gif_to_service.rb	  def self.up
 update	/var/www/myhoame/app/controllers/homes_controller.rb	  def update
 update	/var/www/myhoame/app/controllers/payments_controller.rb	  def update
 update	/var/www/myhoame/app/controllers/services_controller.rb	  def update
