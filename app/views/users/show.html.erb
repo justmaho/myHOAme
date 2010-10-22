@@ -1,9 +1,16 @@
 <p id="notice"><%= notice %></p>
+<div id="central_content">
+<div id="column1">
 <% if @user.avatar.exists? then %>
 <%= image_tag @user.avatar.url(:small) %>
 <% else %>
 <%= link_to "There are no photo’s attached, upload one.", edit_user_path(current_user) %>
 <% end %>
+</div>
+<div id="column2">
+<p>
+  <b>Informacion Personal </b>
+</p>
 <p>
   <b>Name:</b>
   <%= @user.name %>
@@ -13,7 +20,11 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
+<p>
+  <%= link_to 'Editar', edit_user_path(current_user.id) %>
+</p>
+</div>
+<div id="column3">
 <p>
   <b>Informacion de casa </b>
 </p>
@@ -27,28 +38,9 @@
   <%= home.phone %>
 </p>
 <p>
-  <%= link_to 'Editar esta informacion', edit_home_path(home.id) %>
+  <%= link_to 'Editar', edit_home_path(home.id) %>
 </p>
 <% end %>
+</div>
+</div>
 
-<p>
-  <b>Pagos realizados </b>
-</p>
-<% @payment.each do |money| %>
-<p>
-  <b>Cantidad: </b>
-  $<%= money.ammount %>
-</p>
-<p>
-  <b>Concepto: </b>
-  <%= money.concept %>
-</p>
-<p>
-  <b>Fecha: </b>
-  <%= money.created_at %>
-</p>
-<% end %>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

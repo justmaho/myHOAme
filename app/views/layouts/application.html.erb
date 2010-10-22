@@ -34,9 +34,13 @@ $(document).ready(function(){
 	}
 });
 </script>
-<div id="logout"><%= render 'layouts/top_nav' %></div>
-<h2>Bienvenido, Mahonri Garnica</h2>
+
 <!-- begin vertical tabs demo -->
+<div id="main-container">
+<div id="logout"><%= render 'layouts/top_nav' %></div>
+<% if user_signed_in? %>
+<h2>Bienvenido, <%= current_user.name %></h2>
+<% end %>
 <div id="vtabs1">
 	<div>
     <ul>
@@ -48,14 +52,9 @@ $(document).ready(function(){
 	<div>
 		<div id="#vtabs-content-a">
     <%= yield %>	
-		</div>
-		<div id="#vtabs-content-b">
-			Panel 2
-		</div>
-		<div id="#vtabs-content-c">
-			Panel 3
-		</div>	
+  </div>
 	</div>
+</div>
 </div>
 </body>
 </html>

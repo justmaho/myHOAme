@@ -1,6 +1,33 @@
+body{
+  font-size:12px;
+}
+
+#main-container{
+  width:950px;
+  margin:0 auto;
+}
+#central_content{
+  padding:10px;
+}
 
 #logout{
   float:right;
   font-size:12px;
   margin:5px;
 }
+
+#column1{
+  float:left;
+}
+
+#column2{
+  float:left;
+  margin-left:50px;
+}
+
+#column3{
+  float:left;
+  margin-left:50px;
+}
+
+
