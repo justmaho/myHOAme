@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:home, :emergency, :contact]
+  layout 'static_pages'
   
   def about
     @title = "About"
@@ -15,6 +15,10 @@ class PagesController < ApplicationController
   
   def emergency
     @title = "Emergency Phone Numbers"
+  end
+  
+  def index
+    @title = "Welcome to myHOAme"
   end
 
 end

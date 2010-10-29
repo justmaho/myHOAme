@@ -22,3 +22,6 @@ http://jimneath.org/2008/04/25/building-a-social-network-site-in-rails/
 
 This one is down. Check later
 http://www.missingmethod.com/2007/01/08/how-to-build-a-social-network-with-ruby-on-rails/
+
+Gem to replace Prototype for JQuery
+http://github.com/indirect/jquery-rails

@@ -1,4 +1,4 @@
-1287720642
+1288328152
 AddAttachmentAvatarToUser	/var/www/myhoame/db/migrate/20101018025008_add_attachment_avatar_to_user.rb	class AddAttachmentAvatarToUser 
 AddGifToService	/var/www/myhoame/db/migrate/20101020025559_add_gif_to_service.rb	class AddGifToService 
 AddNameToUser	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	class AddNameToUser 
@@ -44,6 +44,7 @@ UsersControllerTest	/var/www/myhoame/test/functional/users_controller_test.rb	cl
 UsersHelper	/var/www/myhoame/app/helpers/users_helper.rb	module UsersHelper 
 UsersHelperTest	/var/www/myhoame/test/unit/helpers/users_helper_test.rb	class UsersHelperTest 
 about	/var/www/myhoame/app/controllers/pages_controller.rb	  def about
+after_sign_in_path_for	/var/www/myhoame/app/controllers/application_controller.rb	  def after_sign_in_path_for
 contact	/var/www/myhoame/app/controllers/pages_controller.rb	  def contact
 create	/var/www/myhoame/app/controllers/homes_controller.rb	  def create
 create	/var/www/myhoame/app/controllers/payments_controller.rb	  def create
@@ -70,9 +71,11 @@ edit	/var/www/myhoame/app/controllers/users_controller.rb	  def edit
 emergency	/var/www/myhoame/app/controllers/pages_controller.rb	  def emergency
 home	/var/www/myhoame/app/controllers/pages_controller.rb	  def home
 index	/var/www/myhoame/app/controllers/homes_controller.rb	  def index
+index	/var/www/myhoame/app/controllers/pages_controller.rb	  def index
 index	/var/www/myhoame/app/controllers/payments_controller.rb	  def index
 index	/var/www/myhoame/app/controllers/services_controller.rb	  def index
 index	/var/www/myhoame/app/controllers/users_controller.rb	  def index
+layout_by_resource	/var/www/myhoame/app/controllers/application_controller.rb	  def layout_by_resource
 new	/var/www/myhoame/app/controllers/homes_controller.rb	  def new
 new	/var/www/myhoame/app/controllers/payments_controller.rb	  def new
 new	/var/www/myhoame/app/controllers/services_controller.rb	  def new
@@ -81,6 +84,7 @@ show	/var/www/myhoame/app/controllers/homes_controller.rb	  def show
 show	/var/www/myhoame/app/controllers/payments_controller.rb	  def show
 show	/var/www/myhoame/app/controllers/services_controller.rb	  def show
 show	/var/www/myhoame/app/controllers/users_controller.rb	  def show
+stored_location_for	/var/www/myhoame/app/controllers/application_controller.rb	  def stored_location_for
 test_homepage	/var/www/myhoame/test/performance/browsing_test.rb	  def test_homepage
 up	/var/www/myhoame/db/migrate/20101015210944_create_users.rb	  def self.up
 up	/var/www/myhoame/db/migrate/20101015211546_create_homes.rb	  def self.up

@@ -8,6 +8,9 @@ gem 'rails', '3.0.1'
 gem 'mysql2'
 gem 'devise'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'jquery-rails'
+gem "tabletastic", '~> 0.2.0.pre6'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -2,60 +2,77 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>MyHOAme | <%= @title %></title>
+  <%= stylesheet_link_tag 'blueprint/screen.css', :media => 'screen' %>
   <%= stylesheet_link_tag 'style.css', :media => 'screen' %>
-  <%= stylesheet_link_tag 'jquery-jvert-tabs-1.1.4.css', :media => 'screen' %>
-  <%= javascript_include_tag 'jquery-1.4.1.min.js' %>
-  <%= javascript_include_tag 'jquery-jvert-tabs-1.1.4.js' %>
+  <!--[if lt IE 8]>
+   <%= stylesheet_link_tag 'blueprint/ie.css', :media => 'screen' %>
+<![endif]-->
+<%= javascript_include_tag 'jquery-1.4.1.min.js' %>
   <%= csrf_meta_tag %>
+  
+  <script type="text/javascript"> 
+ 
+$(document).ready(function() {
+ 
+	//Default Action
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+	
+	//On Click Event
+	$("ul.tabs li").click(function() {
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+		var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active content
+		return false;
+	});
+ 
+});
+</script>  
 </head>
 <body>
-  <script type="text/javascript">
-$(document).ready(function(){
+  <div id="wraper" class="container">
+    <div id="header">
+      <% if user_signed_in? %>
+        <h2>Bienvenido, <%= current_user.name %></h2><%= render 'layouts/top_nav' %>
+      <% end %>
+    </div>
+    <div id="content">
+      <ul class="tabs">
+        <li><a href="#tab1">Inicio</a></li>
+        <li><a href="#tab2">Servicios</a></li>
+      </ul>
+      <div class="tab_container">
+        <div id="tab1" class="tab_content">
+          <div id="squares">
+            <div id="payments">
+              <h3>Pagos realizados</h3>
+              <%= table_for(@payments) do |t|
+                t.data
+              end %>
 
-	$("#vtabs1").jVertTabs();
-	$("#vtabs2").jVertTabs({
-		selected: 1
-	});
-	$("#vtabs3").jVertTabs({
-		select: function(index){
-			alert("You clicked tab " + index);
-		}
-  });  
-		
-	// add click events for open tab buttons
-	$("input[id^=openTab]").each(function(index){
-		$(this).click(function(){
-			openTab("#vtabs6",index);
-			return false;
-		});
-	});	
-	function openTab(tabId,index){
-		$(tabId).jVertTabs('selected',index);
-	}
-});
-</script>
-
-<!-- begin vertical tabs demo -->
-<div id="main-container">
-<div id="logout"><%= render 'layouts/top_nav' %></div>
-<% if user_signed_in? %>
-<h2>Bienvenido, <%= current_user.name %></h2>
-<% end %>
-<div id="vtabs1">
-	<div>
-    <ul>
-			<li><a href="#vtabs-content-a">Mi informacion</a></li>
-			<li><a href="#vtabs-content-b">Mis pagos</a></li>
-			<li><a href="#vtabs-content-c">Servicios</a></li>
-		</ul>
-	</div>
-	<div>
-		<div id="#vtabs-content-a">
-    <%= yield %>	
-  </div>
-	</div>
-</div>
-</div>
+            
+            </div>
+            <div id="reservations">
+              <h3>Reservaciones</h3>
+            </div>
+            <div id="adds">
+              <h3>En venta</h3>
+            </div>
+          </div>
+          <div id="profile">
+            <h3>Mi informacion</h3>
+            <%= yield %>
+          </div>
+        </div>
+        <div id="tab2" class="tab_content">
+          contenido tab2
+        </div>
+      </div>
+    </div>
+  </div>  
 </body>
 </html>
 
