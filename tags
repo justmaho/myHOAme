@@ -1,4 +1,4 @@
-1288328152
+1288387355
 AddAttachmentAvatarToUser	/var/www/myhoame/db/migrate/20101018025008_add_attachment_avatar_to_user.rb	class AddAttachmentAvatarToUser 
 AddGifToService	/var/www/myhoame/db/migrate/20101020025559_add_gif_to_service.rb	class AddGifToService 
 AddNameToUser	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	class AddNameToUser 
@@ -12,6 +12,10 @@ CreateHomes	/var/www/myhoame/db/migrate/20101015211546_create_homes.rb	class Cre
 CreatePayments	/var/www/myhoame/db/migrate/20101016033001_create_payments.rb	class CreatePayments 
 CreateServices	/var/www/myhoame/db/migrate/20101019223332_create_services.rb	class CreateServices 
 CreateUsers	/var/www/myhoame/db/migrate/20101015210944_create_users.rb	class CreateUsers 
+DashboardControllerTest	/var/www/myhoame/test/functional/dashboard_controller_test.rb	class DashboardControllerTest 
+DashboardHelper	/var/www/myhoame/app/helpers/dashboard_helper.rb	module DashboardHelper
+DashboardHelperTest	/var/www/myhoame/test/unit/helpers/dashboard_helper_test.rb	class DashboardHelperTest 
+DashboardsController	/var/www/myhoame/app/controllers/dashboards_controller.rb	class DashboardsController 
 DeviseCreateUsers	/var/www/myhoame/db/migrate/20101016200311_devise_create_users.rb	class DeviseCreateUsers 
 Home	/var/www/myhoame/app/models/home.rb	class Home 
 HomeTest	/var/www/myhoame/test/unit/home_test.rb	class HomeTest 
@@ -80,6 +84,7 @@ new	/var/www/myhoame/app/controllers/homes_controller.rb	  def new
 new	/var/www/myhoame/app/controllers/payments_controller.rb	  def new
 new	/var/www/myhoame/app/controllers/services_controller.rb	  def new
 new	/var/www/myhoame/app/controllers/users_controller.rb	  def new
+show	/var/www/myhoame/app/controllers/dashboards_controller.rb	def show
 show	/var/www/myhoame/app/controllers/homes_controller.rb	  def show
 show	/var/www/myhoame/app/controllers/payments_controller.rb	  def show
 show	/var/www/myhoame/app/controllers/services_controller.rb	  def show

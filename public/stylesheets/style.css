@@ -31,7 +31,7 @@ body,html{
 
 #payments{
   width:645px;
-  border:1px solid #333;
+  /*border:1px solid #333;*/
   margin-bottom:10px;
   padding:10px;
 }

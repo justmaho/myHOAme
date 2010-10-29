@@ -62,11 +62,57 @@ $(document).ready(function() {
           </div>
           <div id="profile">
             <h3>Mi informacion</h3>
-            <%= yield %>
-          </div>
+              <p id="notice"><%= notice %></p>
+              <div id="central_content">
+                <div id="column1">
+                  <% if @user.avatar.exists? then %>
+                  <%= image_tag @user.avatar.url(:small) %>
+                  <% else %>
+                  <%= link_to "There are no photo’s attached, upload one.", edit_user_path(current_user) %>
+                  <% end %>
+                </div>
+                <div id="column2">
+                  <p>
+                    <b>Informacion Personal </b>
+                  </p>
+                  <p>
+                    <b>Name:</b>
+                    <%= @user.name %>
+                  </p>
+                  
+                  <p>
+                    <b>Email:</b>
+                    <%= @user.email %>
+                  </p>
+                  <p>
+                    <%= link_to 'Editar', edit_user_path(current_user.id) %>
+                  </p>
+                </div>
+                <div id="column3">
+                  <p>
+                    <b>Informacion de casa </b>
+                  </p>
+                  <% @home.each do |home| %>
+                  <p>
+                    <b>Direccion: </b>
+                    <%= home.address %>
+                  </p>
+                  <p>
+                    <b>Telefono: </b>
+                    <%= home.phone %>
+                  </p>
+                  <p>
+                    <%= link_to 'Editar', edit_home_path(home.id) %>
+                  </p>
+                  <% end %>
+                </div>
+              </div>
+            </div>
         </div>
         <div id="tab2" class="tab_content">
-          contenido tab2
+         <%= table_for(@services) do |t|
+                t.data
+              end %>
         </div>
       </div>
     </div>

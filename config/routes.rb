@@ -6,6 +6,8 @@ Myhoame::Application.routes.draw do
   resources :homes
   resources :users
   resources :services
+  resources :dashboards
+  
   
   get "pages/home"
   get "pages/contact"
