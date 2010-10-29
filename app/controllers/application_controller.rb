@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   def layout_by_resource
     if devise_controller?
+      "devise_pages"
+    elsif pages_controller?
       "static_pages"
     else
       "application"

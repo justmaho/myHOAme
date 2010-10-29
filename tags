@@ -1,4 +1,4 @@
-1288387355
+1288389278
 AddAttachmentAvatarToUser	/var/www/myhoame/db/migrate/20101018025008_add_attachment_avatar_to_user.rb	class AddAttachmentAvatarToUser 
 AddGifToService	/var/www/myhoame/db/migrate/20101020025559_add_gif_to_service.rb	class AddGifToService 
 AddNameToUser	/var/www/myhoame/db/migrate/20101016201325_add_name_to_user.rb	class AddNameToUser 

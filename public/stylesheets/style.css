@@ -29,6 +29,13 @@ body,html{
   margin-right:10px;
 }
 
+#center-box{
+  border:1px solid #ccc;
+  width:300px;
+  margin: 20px auto ;
+  padding:10px;
+}
+
 #payments{
   width:645px;
   /*border:1px solid #333;*/
