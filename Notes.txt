@@ -25,3 +25,6 @@ http://www.missingmethod.com/2007/01/08/how-to-build-a-social-network-with-ruby-
 
 Gem to replace Prototype for JQuery
 http://github.com/indirect/jquery-rails
+
+Gradients
+http://www.colorzilla.com/gradient-editor/
