@@ -1,6 +1,7 @@
 body,html{
   padding:0px;
   margin:0px;
+  font-family:Arial;
 }
 
 #wraper{
@@ -17,6 +18,25 @@ body,html{
   margin-bottom:10px;
   padding:10px;
 }
+
+#links-nav{
+  padding:10px;
+  background: #c3d9ff; /* old browsers */
+  background: -moz-linear-gradient(top, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c3d9ff), color-stop(41%,#b1c8ef), color-stop(100%,#98b0d9)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=0 ); /* ie */
+}
+
+#links-nav a{
+  text-decoration:none;
+  color:#333;
+}
+
+#links-nav a:hover{
+  color:#000;
+}
+
+
 
 #profile{
   width:228px;

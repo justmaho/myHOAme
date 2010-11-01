@@ -33,6 +33,15 @@ $(document).ready(function() {
 </script>  
 </head>
 <body>
+    <div id="links-nav">
+<%= link_to_unless_current "About", pages_about_path %> | 
+<%= link_to_unless_current "Home", root_path %> |
+<%= link_to_unless_current "Contact", pages_contact_path %> |
+<%= link_to_unless_current "Emergency", pages_emergency_path %> |
+
+<%= link_to "Accesar", login_path %> |
+<%= link_to "Registrarse", signup_path %>
+</div>
   <div id="wraper" class="container">
     <div id="header">
       <% if user_signed_in? %>
@@ -42,7 +51,7 @@ $(document).ready(function() {
     <div id="content">
       <ul class="tabs">
         <li><a href="#tab1">Inicio</a></li>
-        <li><a href="#tab2">Servicios</a></li>
+        <li><a href="#tab2">Directorio</a></li>
       </ul>
       <div class="tab_container">
         <div id="tab1" class="tab_content">

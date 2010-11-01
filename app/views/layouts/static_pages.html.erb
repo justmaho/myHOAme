@@ -2,18 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>MyHOAme | <%= @title %></title>
+  <%= stylesheet_link_tag 'blueprint/screen.css', :media => 'screen' %>
   <%= stylesheet_link_tag 'style.css', :media => 'screen' %>
+  <!--[if lt IE 8]>
+   <%= stylesheet_link_tag 'blueprint/ie.css', :media => 'screen' %>
+<![endif]-->
   <%= javascript_include_tag 'jquery-1.4.1.min.js' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="links-nav">
 <%= link_to_unless_current "About", pages_about_path %> | 
 <%= link_to_unless_current "Home", root_path %> |
 <%= link_to_unless_current "Contact", pages_contact_path %> |
-<%= link_to_unless_current "Emergency", pages_emergency_path %>
+<%= link_to_unless_current "Emergency", pages_emergency_path %> |
 
-<%= link_to "Accesar", login_path %>
+<%= link_to "Accesar", login_path %> |
 <%= link_to "Registrarse", signup_path %>
+</div>
 <div>
   <%= yield %>
 </div>
