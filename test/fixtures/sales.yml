@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sale_name: MyString
+  price: MyString
+  sold: false
+
+two:
+  sale_name: MyString
+  price: MyString
+  sold: false
