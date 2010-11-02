@@ -8,6 +8,7 @@ def show
       @home = @user.homes
       @payments = @user.payments
       @services = Service.all
+      @sales = @user.sales
       respond_to do |format|
         format.html # show.html.erb
         format.xml  { render :xml => @dashboards }

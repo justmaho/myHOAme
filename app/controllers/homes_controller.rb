@@ -45,7 +45,7 @@ class HomesController < ApplicationController
 
     respond_to do |format|
       if @home.save
-        format.html { redirect_to(@home, :notice => 'Home was successfully created.') }
+        format.html { redirect_to(dashboard_path(current_user.id), :notice => 'Home was successfully created.') }
         format.xml  { render :xml => @home, :status => :created, :location => @home }
       else
         format.html { render :action => "new" }

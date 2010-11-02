@@ -67,6 +67,10 @@ $(document).ready(function() {
             </div>
             <div id="adds">
               <h3>En venta</h3>
+              <%= table_for(@sales) do |t|
+                t.data
+              end %>
+              <%= link_to "Crear nueva venta", new_sale_path %>
             </div>
           </div>
           <div id="profile">

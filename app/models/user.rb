@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   attr_accessible :avatar, :name, :email, :password, :password_confirmation, :remember_me
   has_many :homes 
   has_many :payments
+  has_many :sales
   
   #email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
