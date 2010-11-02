@@ -122,6 +122,9 @@ $(document).ready(function() {
          <%= table_for(@services) do |t|
                 t.data
               end %>
+              <% if current_user.role == 1 %>
+                <%= link_to 'Agregar', new_service_path %>
+              <% end %>
         </div>
       </div>
     </div>

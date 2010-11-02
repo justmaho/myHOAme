@@ -1,6 +1,9 @@
 class ServicesController < ApplicationController
   # GET /services
   # GET /services.xml
+  
+  layout "static_pages"
+  
   def index
     @services = Service.all
 

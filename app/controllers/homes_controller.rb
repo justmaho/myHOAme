@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   before_filter :authenticate_user!
+  layout "static_pages"
   
   def index
     @homes = Home.all
@@ -60,7 +61,7 @@ class HomesController < ApplicationController
 
     respond_to do |format|
       if @home.update_attributes(params[:home])
-        format.html { redirect_to(@home, :notice => 'Home was successfully updated.') }
+        format.html { redirect_to(dashboard_path(current_user.id), :notice => 'Home was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
