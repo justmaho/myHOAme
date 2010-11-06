@@ -50,98 +50,18 @@ $(document).ready(function() {
     </div>
     <div id="content">
       <ul class="tabs">
-        <li><a href="#tab1">Inicio</a></li>
-        <li><a href="#tab2">En venta</a></li>
-        <li><a href="#tab3">Reservaciones</a></li>
-        <li><a href="#tab4">Directorio</a></li>
+        <li><a href="#tab1">Mi informacion</a></li>
+        <li><a href="#tab2">Mis pagos</a></li>
+        <li><a href="#tab3">Compra/Venta</a></li>
+        <li><a href="#tab4">Mis reservaciones</a></li>
+        <li><a href="#tab5">Directorio</a></li>
       </ul>
       <div class="tab_container">
-        <div id="tab1" class="tab_content">
-          <div id="squares">
-            <div id="payments">
-              <h3>Pagos realizados</h3>
-              <%= table_for(@payments) do |t|
-                t.data :ammount, :concept, :updated_at
-              end %>
-            </div>
-            <div id="reservations">
-              <h3>Reservaciones</h3>
-            </div>
-            <div id="adds">
-              <h3>En venta</h3>
-              <%= table_for(@sales) do |t|
-                t.data
-              end %>
-              <%= link_to "Crear nueva venta", new_sale_path %>
-            </div>
-          </div>
-          <div id="profile">
-            <h3>Mi informacion</h3>
-              <p id="notice"><%= notice %></p>
-              <div id="central_content">
-                <div id="column1">
-                  <% if @user.avatar.exists? then %>
-                  <%= image_tag @user.avatar.url(:small) %>
-                  <% else %>
-                  <%= link_to "There are no photo’s attached, upload one.", edit_user_path(current_user) %>
-                  <% end %>
-                </div>
-                <div id="column2">
-                  <p>
-                    <b>Informacion Personal </b>
-                  </p>
-                  <p>
-                    <b>Name:</b>
-                    <%= @user.name %>
-                  </p>
-                  
-                  <p>
-                    <b>Email:</b>
-                    <%= @user.email %>
-                  </p>
-                  <p>
-                    <%= link_to 'Editar', edit_user_path(current_user.id) %>
-                  </p>
-                </div>
-                <div id="column3">
-                  <p>
-                    <b>Informacion de casa </b>
-                  </p>
-                  <% @home.each do |home| %>
-                  <p>
-                    <b>Direccion: </b>
-                    <%= home.address %>
-                  </p>
-                  <p>
-                    <b>Telefono: </b>
-                    <%= home.phone %>
-                  </p>
-                  <p>
-                    <%= link_to 'Editar', edit_home_path(home.id) %>
-                  </p>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div id="tab2" class="tab_content">
-         <%= table_for(@sales) do |t|
-                t.data
-              end %>
-              <%= link_to "Crear nueva venta", new_sale_path %>
-        </div>
-        <div id="tab3" class="tab_content">
-          <h2>Reservaciones</h2>
-         
-        </div>
-        <div id="tab4" class="tab_content">
-          <%= table_for(@services) do |t|
-                t.data
-              end %>
-              <% if current_user.role == 1 %>
-                <%= link_to 'Agregar', new_service_path %>
-              <% end %>
-        </div>
+      <%= render 'tabs/tab1' %>
+      <%= render 'tabs/tab2' %>
+      <%= render 'tabs/tab3' %>
+      <%= render 'tabs/tab4' %>
+      <%= render 'tabs/tab5' %>
       </div>
     </div>
   </div>  

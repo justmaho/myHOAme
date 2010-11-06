@@ -1,0 +1,9 @@
+<div id="tab5" class="tab_content">
+  <h2>Directorio de servicios</h2>
+  <%= table_for(@services) do |t|
+    t.data
+  end %>
+  <% if current_user.role == 1 %>
+    <%= link_to 'Agregar', new_service_path %>
+    <% end %>
+</div>

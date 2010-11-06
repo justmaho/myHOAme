@@ -1,0 +1,40 @@
+<div id="tab1" class="tab_content">  
+  <h2>Mi información</h2>
+  <% if @user.avatar.exists? then %>
+    <%= image_tag @user.avatar.url(:small) %>
+  <% else %>
+    <%= link_to "There are no photo’s attached, upload one.", edit_user_path(current_user) %>
+  <% end %>
+  <p>
+    <b>Informacion Personal </b>
+  </p>
+  <p>
+    <b>Name:</b>
+    <%= @user.name %>
+  </p>
+                  
+  <p>
+    <b>Email:</b>
+    <%= @user.email %>
+  </p>
+  <p>
+    <%= link_to 'Editar', edit_user_path(current_user.id) %>
+  </p>
+  
+  <p>
+    <b>Informacion de casa </b>
+  </p>
+  <% @home.each do |home| %>
+  <p>
+    <b>Direccion: </b>
+    <%= home.address %>
+  </p>
+  <p>
+    <b>Telefono: </b>
+    <%= home.phone %>
+  </p>
+  <p>
+    <%= link_to 'Editar', edit_home_path(home.id) %>
+  </p>
+  <% end %>
+</div>

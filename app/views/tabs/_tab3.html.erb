@@ -1,0 +1,7 @@
+<div id="tab3" class="tab_content">
+  <h2>Compra y vende</h2>
+  <%= table_for(@sales) do |t|
+    t.data
+  end %>
+  <%= link_to "Crear nueva venta", new_sale_path %>
+</div>
